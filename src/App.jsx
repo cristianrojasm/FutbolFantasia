@@ -9,6 +9,7 @@ import Jugadores from "./componentes/jugadores/Jugadores.jsx";
 import Navbar from "./componentes/inicio/Navbar.jsx";
 import Hero from "./componentes/inicio/Hero";
 import Features from "./componentes/inicio/Features";
+import MisEquipos from "./MisEquipos.jsx";
 
 // ✅ Importar correctamente los archivos de Ligas
 import Ligas from "./componentes/ligas/Ligas.jsx";
@@ -18,7 +19,7 @@ import "./componentes/ligas/Ligas.css";
 const Home = () => <h2>Home</h2>;
 const LigasTemp = () => <h2>Ligas</h2>; // 🔹 Renombrado para evitar conflicto
 const JugadoresTemp = () => <h2>Jugadores</h2>;
-const Equipos = () => <h2>Equipos</h2>;
+//const Equipos = () => <h2>Equipos</h2>;
 const Ranking = () => <h2>Ranking</h2>;
 const Admin =() => <h2>PanelAdmin</h2>
 
@@ -34,7 +35,7 @@ function App() {
         <Route path="/perfil" element={<Perfil />} /> {/* 2. Ahora sí usa el componente correcto */}
         <Route path="/verLiga" element={<Ligas />} /> {/* ✅ Conecta al componente real */}
         <Route path="/jugadores" element={<Jugadores />} />
-        <Route path="/misEquipos" element={<Equipos />} />
+        <Route path="/misEquipos" element={<MisEquipos />} />
         <Route path="/ranking" element={<Ranking />} />
         <Route path="/administrador" element={<PanelAdmin />} />
       </Routes>
