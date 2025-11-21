@@ -1,124 +1,79 @@
-/* ============================
-   CONTENEDOR PRINCIPAL
-   ============================ */
+/* Fondo general */
 .mis-equipos-container {
-  padding: 30px;
-  max-width: 1200px;
-  margin: auto;
-  color: white;
-  text-align: center;
-  background: linear-gradient(135deg, #0c1222, #121928);
+  background-color: #0d1117; 
   min-height: 100vh;
-  font-family: 'Poppins', sans-serif;
+  padding: 40px;
+  color: white;
 }
 
-/* ============================
-   TEXTOS PRINCIPALES
-   ============================ */
+/* Título con estilo */
 .titulo-equipos {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #00ffd5;
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #00e1ff;
   margin-bottom: 10px;
 }
 
+/* Subtítulo */
 .subtitulo-equipos {
-  color: #a3b0c3;
   font-size: 1rem;
-  margin-bottom: 40px;
+  color: #b0b0b0;
+  margin-bottom: 25px;
 }
 
-.no-equipos {
-  color: #c2c7d0;
-  margin-top: 20px;
-  font-size: 1.1rem;
-}
-
-/* ============================
-   GRID DE TARJETAS
-   ============================ */
+/* Contenedor de tarjetas */
 .lista-equipos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.tarjeta-equipo-dark {
-  background: rgba(255, 255, 255, 0.06);
+/* Tarjeta individual */
+.tarjeta-equipo {
+  background: #161b22;
   padding: 20px;
-  border-radius: 18px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-  transition: transform 0.25s ease-in-out;
+  border-radius: 12px;
+  width: 300px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.1);
 }
 
-.tarjeta-equipo-dark:hover {
-  transform: translateY(-6px);
+.tarjeta-equipo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.4);
 }
 
-/* ============================
-   TEXTOS DE CADA TARJETA
-   ============================ */
 .nombre-equipo {
-  color: #00ffd5;
-  font-size: 1.3rem;
-  margin-bottom: 5px;
+  font-size: 1.5rem;
+  color: #24c4ff;
+  margin-bottom: 8px;
 }
 
-.texto-info {
-  font-size: 0.95rem;
-  color: #bfc8d4;
-}
-
-/* ============================
-   LISTA DE JUGADORES
-   ============================ */
+/* Jugadores */
 .jugadores ul {
+  margin-top: 5px;
   list-style: none;
   padding: 0;
 }
 
-.tag-jugador {
-  background: rgba(0, 255, 213, 0.1);
-  border: 1px solid #00ffd5;
-  color: #00ffd5;
-  margin: 4px 0;
-  padding: 6px;
-  font-size: 0.85rem;
-  border-radius: 8px;
-  display: inline-block;
+.jugadores li {
+  padding: 3px 0;
+  font-size: 0.9rem;
+  color: #d6d6d6;
 }
 
-/* ============================
-   BOTÓN DETALLES
-   ============================ */
-.btn-detalle {
-  background: linear-gradient(90deg, #0099ff, #006aff);
+/* Botón */
+.btn-detalles {
+  margin-top: 10px;
+  background-color: #00c1ff;
   border: none;
-  padding: 10px 20px;
-  margin-top: 15px;
+  padding: 8px 12px;
   border-radius: 8px;
   cursor: pointer;
-  color: white;
-  font-weight: 600;
-  transition: opacity 0.25s;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
-.btn-detalle:hover {
-  opacity: 0.8;
-}
-
-/* ============================
-   RESPONSIVE
-   ============================ */
-@media (max-width: 600px) {
-  .titulo-equipos {
-    font-size: 2rem;
-  }
-  .tarjeta-equipo-dark {
-    padding: 15px;
-  }
-  .btn-detalle {
-    width: 100%;
-  }
+.btn-detalles:hover {
+  background-color: #0090c7;
 }
