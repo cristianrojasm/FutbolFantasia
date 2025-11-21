@@ -1,0 +1,124 @@
+/* ============================
+   CONTENEDOR PRINCIPAL
+   ============================ */
+.mis-equipos-container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+  color: white;
+  text-align: center;
+  background: linear-gradient(135deg, #0c1222, #121928);
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ============================
+   TEXTOS PRINCIPALES
+   ============================ */
+.titulo-equipos {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00ffd5;
+  margin-bottom: 10px;
+}
+
+.subtitulo-equipos {
+  color: #a3b0c3;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.no-equipos {
+  color: #c2c7d0;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+/* ============================
+   GRID DE TARJETAS
+   ============================ */
+.lista-equipos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.tarjeta-equipo-dark {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  transition: transform 0.25s ease-in-out;
+}
+
+.tarjeta-equipo-dark:hover {
+  transform: translateY(-6px);
+}
+
+/* ============================
+   TEXTOS DE CADA TARJETA
+   ============================ */
+.nombre-equipo {
+  color: #00ffd5;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.texto-info {
+  font-size: 0.95rem;
+  color: #bfc8d4;
+}
+
+/* ============================
+   LISTA DE JUGADORES
+   ============================ */
+.jugadores ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tag-jugador {
+  background: rgba(0, 255, 213, 0.1);
+  border: 1px solid #00ffd5;
+  color: #00ffd5;
+  margin: 4px 0;
+  padding: 6px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* ============================
+   BOTÓN DETALLES
+   ============================ */
+.btn-detalle {
+  background: linear-gradient(90deg, #0099ff, #006aff);
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition: opacity 0.25s;
+}
+
+.btn-detalle:hover {
+  opacity: 0.8;
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 600px) {
+  .titulo-equipos {
+    font-size: 2rem;
+  }
+  .tarjeta-equipo-dark {
+    padding: 15px;
+  }
+  .btn-detalle {
+    width: 100%;
+  }
+}
