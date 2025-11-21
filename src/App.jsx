@@ -1,47 +1,52 @@
-console.log("Ruta Menu cargando:", import.meta.url);
+// ⬅ Dependencias necesarias
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import './App.css'
-import './componentes/estilosGenerales.css'
-import Menu from './componentes/menu/menu.jsx';
-import Perfil from "./componentes/perfil/page.tsx"; // 1. Importa el componente real
-import PanelAdmin from "./componentes/administrador/PanelAdmin.jsx";
-import Jugadores from "./componentes/jugadores/Jugadores.jsx";
-import Navbar from "./componentes/inicio/Navbar.jsx";
-import Hero from "./componentes/inicio/Hero";
-import Features from "./componentes/inicio/Features";
+import "./App.css";
+import Menu from "./componentes/menu/menu.jsx";
 import MisEquipos from "./MisEquipos.jsx";
 
-// ✅ Importar correctamente los archivos de Ligas
-import Ligas from "./componentes/ligas/Ligas.jsx";
-import "./componentes/ligas/Ligas.css";
-
-//constates temporales para probar el menu
-const Home = () => <h2>Home</h2>;
-const LigasTemp = () => <h2>Ligas</h2>; // 🔹 Renombrado para evitar conflicto
-const JugadoresTemp = () => <h2>Jugadores</h2>;
-//const Equipos = () => <h2>Equipos</h2>;
-const Ranking = () => <h2>Ranking</h2>;
-const Admin =() => <h2>PanelAdmin</h2>
+// 🔹 COMPONENTES TEMPORALES PARA PRUEBAS
+const Home = () => <h2>🏠 Home</h2>;
+const Perfil = () => <h2>👤 Perfil</h2>;
+const Jugadores = () => <h2>🧑‍🤝‍🧑 Jugadores</h2>;
+const Ligas = () => <h2>🏆 Ligas</h2>;
+const Ranking = () => <h2>📈 Ranking</h2>;
+const PanelAdmin = () => <h2>⚙ Admin</h2>;
 
 function App() {
+  // ⬅ Datos de prueba (puedes quitarlos cuando tengas backend)
+  const equiposPrueba = [
+    {
+      id: 1,
+      nombre: "FC Talentoso",
+      liga: "Premier League",
+      puntos: 78,
+      jugadores: ["Messi", "Neymar", "Mbappé"],
+    },
+    {
+      id: 2,
+      nombre: "Los Legendarios",
+      liga: "La Liga",
+      puntos: 92,
+      jugadores: ["Lewandowski", "Pedri", "Ter Stegen"],
+    },
+  ];
+
   return (
-    <>
-    {/*menu, esto es un comentario en react*/}
     <BrowserRouter>
-      <Menu />
-    {/*rutas para el funcionamiento del menu,!hay que modificarlo cuando esten los componentes front-end listos*/}
+      <Menu /> {/* Menú de navegación */}
+
       <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/perfil" element={<Perfil />} /> {/* 2. Ahora sí usa el componente correcto */}
-        <Route path="/verLiga" element={<Ligas />} /> {/* ✅ Conecta al componente real */}
+        <Route path="/" element={<Home />} />
+        <Route path="/perfil" element={<Perfil />} />
         <Route path="/jugadores" element={<Jugadores />} />
-        <Route path="/misEquipos" element={<MisEquipos />} />
+        <Route path="/verLiga" element={<Ligas />} />
+        <Route path="/misEquipos" element={<MisEquipos equipos={equiposPrueba} />} />
         <Route path="/ranking" element={<Ranking />} />
         <Route path="/administrador" element={<PanelAdmin />} />
       </Routes>
     </BrowserRouter>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
+
