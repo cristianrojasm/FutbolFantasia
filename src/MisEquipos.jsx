@@ -26,3 +26,14 @@ const MisEquipos = ({ equipos }) => {
                   ))}
                 </ul>
               </div>
+
+              <button className="btn-detalle">Ver detalles</button>
+            </div>
+          ))
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default MisEquipos;
