@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "./App.css"; // Puedes cambiar por tu hoja de estilos si tienes otra
+import "./App.css"; //
 
-// 🏆 Componente principal para mostrar los equipos del usuario
+// Componente principal para mostrar los equipos del usuario
 const MisEquipos = () => {
   // Estado con equipos simulados
   const [equipos, setEquipos] = useState([]);
